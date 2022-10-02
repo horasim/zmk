@@ -1,17 +1,17 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_CRADIO_LEFT
+if SHIELD_PARADIGM_SHIFT_LEFT
 
 config ZMK_KEYBOARD_NAME
-	default "Cradio"
+	default "paradigmShift"
 
 config ZMK_SPLIT_ROLE_CENTRAL
 	default y
 
 endif
 
-if SHIELD_CRADIO_LEFT || SHIELD_CRADIO_RIGHT
+if SHIELD_PARADIGM_SHIFT_LEFT || SHIELD_PARADIGM_SHIFT_RIGHT
 
 config ZMK_SPLIT
 	default y
