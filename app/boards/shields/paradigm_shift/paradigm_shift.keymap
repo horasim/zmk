@@ -17,6 +17,23 @@
   //  flavor = "tap-preferred";
    // tapping_term_ms = <200>;
 };
+
+/ {
+    macros {
+        ctrl_backspace: ctrl_backspace {
+            label = "CTRL_BSPC";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+			wait-ms = <10>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp BSPC>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+    };
+};
+
 /  {
         keymap {
                 compatible = "zmk,keymap";
@@ -25,17 +42,17 @@
 		bindings = <
 		&kp Q &kp W &kp F &kp P &kp B   						&kp J &kp L    &kp U    &kp Y   &kp BSLH
 		&kp A &kp R &kp S &kp T &kp G   			      &kp M &kp N    &kp E    &kp I   &kp O 
-		&kp Z &kp V &kp C &kp D 			  	        	      &kp H    &kp X    &kp K   &kp DOT
-          			&kp LCTRL &sk LSHFT &to 1 			&kp RET &kp SPC &kp BSPC 
+		&kp Z &kp V &kp C &kp D 			  	        	      &kp H    &kp K    &kp X   &kp DOT
+          			&kp LCTRL &sk LSHFT &to 1 			&kp RET &kp SPC &ctrl_backspace 
 		>;
 		};
 
           	number_layer {
 		bindings = <
 		&kp NUM_1  &kp NUM_2    &kp NUM_3    &kp NUM_4    &kp NUM_5		&kp NUM_6 &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp NUM_0
-		&kp PLUS &kp MINUS &kp SLASH &kp STAR &kp EQUAL 			      &kp GRAVE &kp LEFT &kp DOWN &kp UP  &kp RIGHT
+		&kp LEFT &kp DOWN &kp UP  &kp RIGHT  &kp GRAVE  		&kp PLUS &kp MINUS &kp SLASH &kp STAR &kp EQUAL
 		&kp RPAR &kp LPAR &kp LBRC &kp RBRC 				        	      &kp SEMI &kp CMMA &kp DOT &kp RET
-          			&kp LCTRL &sk LSHFT &to 2		&to 0 &kp RGUI &kp LSHFT
+          			&kp LCTRL &sk LSHFT &to 2		&to 0 &kp LGUI &kp LSHFT
 		>;
 		};
 
