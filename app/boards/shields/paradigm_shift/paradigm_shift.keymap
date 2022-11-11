@@ -43,7 +43,7 @@
 		&kp Q &kp W &kp F &kp P &kp B   						&kp J &kp L    &kp U    &kp Y   &kp BSLH
 		&kp A &kp R &kp S &kp T &kp G   			      &kp M &kp N    &kp E    &kp I   &kp O 
 		&kp Z &kp V &kp C &kp D 			  	        	      &kp H    &kp K    &kp X   &kp DOT
-          			&kp LCTRL &sk LSHFT &to 1 			&kp RET &kp SPC &ctrl_backspace 
+          			&kp TAB &sk LSHFT &to 1 			&kp RET &kp SPC &ctrl_backspace 
 		>;
 		};
 
